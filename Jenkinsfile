@@ -6,7 +6,8 @@
 		label	"AKS"
 	}
      
-   stage('SCM Checkout'){
+stages{
+    stage('SCM Checkout'){
      git 'https://github.com/javahometech/my-app'
    }
     stage('Mvn Package'){
