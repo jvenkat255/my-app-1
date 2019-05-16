@@ -1,9 +1,9 @@
-  pipeline{
-	 tools{
+pipeline{
+    tools{
         mvn 'maven-3'
     }    
-	agent{
-		label	"AKS"
+    agent{
+	label "AKS"
 	}
      
 stages{
@@ -11,6 +11,6 @@ stages{
      git 'https://github.com/javahometech/my-app'
    }
     stage('Mvn Package'){
-      sh 'mvn clean package'
+      bat 'mvn clean package'
     }
 }
