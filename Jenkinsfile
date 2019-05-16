@@ -11,6 +11,9 @@ stages{
      git 'https://github.com/javahometech/my-app'
    }
     stage('Mvn Package'){
-      bat 'mvn clean package'
-    }
+	    steps {
+		    bat 'mvn clean package'
+    		}
+	     }
+	}
 }
