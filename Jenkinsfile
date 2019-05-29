@@ -17,11 +17,7 @@ pipeline{
 			steps{
 				cleanWs()
 				script{
-				checkout([$class: 'GitSCM', branches: [[name: "${params.ciGitCommit}"]], 
-						doGenerateSubmoduleConfigurations: false, 
-						extensions: [], 
-						submoduleCfg: [], 
-						userRemoteConfigs: [[credentialsId: 'jvenkat255', url: 'https://github.com/jvenkat255/my-app-1.git']]])
+				checkout([$class: 'GitSCM', branches: [[name: '*/bitbucket']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '864c9307-60a8-4204-b232-825d5a2c7e5b', url: 'git@github.com:jvenkat255/my-app-1.git']]])
 					}
 					
 				}
